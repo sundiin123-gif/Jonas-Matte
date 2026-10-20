@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c0d11">
+  <meta name="description" content="Last ned og kom i gang med Jonas Matte for Windows.">
+  <title>Last ned Jonas Matte — Jonas Spill</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f0f1f4;
+      --muted: #a3a6b0;
+      --paper: #0c0d11;
+      --card: #15171d;
+      --accent: #d3f36b;
+      --accent-hover: #c2e95a;
+      --line: rgba(255, 255, 255, .12);
+      font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: radial-gradient(ellipse at top, #20251a 0, var(--paper) 58%);
+      color: var(--ink);
+    }
+    a { color: inherit; }
+    main {
+      width: min(620px, 100%);
+      padding: clamp(26px, 6vw, 52px);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: rgba(21, 23, 29, .94);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, .42);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      font-size: 17px;
+      font-weight: 850;
+      letter-spacing: -.5px;
+      text-decoration: none;
+    }
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--accent);
+      color: #11130c;
+      transform: rotate(-7deg);
+    }
+    .eyebrow {
+      margin: 34px 0 12px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(38px, 8vw, 58px);
+      line-height: 1;
+      letter-spacing: -2.7px;
+    }
+    p { color: var(--muted); line-height: 1.7; }
+    .button {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 12px 0 4px;
+      padding: 0 22px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #11130c;
+      font-size: 14px;
+      font-weight: 750;
+      text-decoration: none;
+      box-shadow: 0 9px 22px rgba(211, 243, 107, .12);
+      transition: transform .2s ease, background .2s ease;
+    }
+    .button:hover { background: var(--accent-hover); transform: translateY(-2px); }
+    .warning {
+      margin: 16px 0 0;
+      padding: 10px 12px;
+      border-left: 3px solid #f06464;
+      border-radius: 4px;
+      background: rgba(240, 100, 100, .08);
+      color: #ffaaaa;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .warning a { color: #ffaaaa; font-weight: 750; }
+    .steps {
+      display: grid;
+      gap: 12px;
+      margin: 26px 0 0;
+      padding: 18px 20px 18px 40px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--card);
+    }
+    .steps li { padding-left: 4px; color: var(--muted); line-height: 1.6; }
+    .steps li::marker { color: var(--accent); font-weight: 800; }
+    strong { color: var(--ink); }
+    .back { display: inline-block; margin-top: 22px; color: var(--muted); font-size: 14px; text-decoration: none; }
+    .back:hover { color: var(--accent); }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="brand" href="index.html" aria-label="Jonas Spill, tilbake til forsiden">
+      <span class="brand-mark" aria-hidden="true">J</span>
+      <span>Jonas Spill</span>
+    </a>
+    <p class="eyebrow">Klar for en runde?</p>
+    <h1>Velkommen til Jonas Matte!</h1>
+    <p id="download-status" role="status" aria-live="polite">Nedlastingen starter. Hvis den ikke begynner automatisk, kan du starte den her:</p>
+    <a class="button" id="download-link" href="https://github.com/sundiin123-gif/Jonas-matte-download/raw/refs/heads/main/JonasMatte.exe">
+      Last ned JonasMatte.exe <span aria-hidden="true">↓</span>
+    </a>
+    <p class="warning"><strong>Advarsel:</strong> Les <code>README.md</code> før du bruker programmet – den inneholder nødvendige oppstartsinstruksjoner! <a href="https://github.com/sundiin123-gif/Jonas-Matte">Klikk her for å lese den på GitHub.</a></p>
+    <ol class="steps">
+      <li>Vent til <strong>JonasMatte.exe</strong> er ferdig nedlastet. Den ligger vanligvis i Nedlastinger-mappen.</li>
+      <li>Åpne Nedlastinger og dobbeltklikk på <strong>JonasMatte.exe</strong>.</li>
+      <li>Første gang gjør appen klar en egen <strong>JonasMatte</strong>-mappe ved siden av nedlastingen. Følg eventuell Windows-sikkerhetsmelding bare hvis du stoler på fila.</li>
+    </ol>
+    <a class="back" href="index.html">← Tilbake til Jonas Spill</a>
+  </main>
+  <script>
+    window.addEventListener("load", () => {
+      window.setTimeout(() => {
+        document.getElementById("download-link").click();
+      }, 500);
+    });
+  </script>
+</body>
+</html>
