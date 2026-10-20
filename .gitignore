@@ -1,7 +1,0 @@
-users.jsonl
-news.jsonl
-Logs/
-__pycache__/
-build/
-dist/
-*.spec
